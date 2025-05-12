@@ -7,7 +7,7 @@ import {
   VictoryAxis,
   VictoryTheme,
   VictoryLabel,
-} from 'victory-native';
+} from 'victory';
 
 interface LineChartProps {
   data: Array<{ x: string | number; y: number }>;

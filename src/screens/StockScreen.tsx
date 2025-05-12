@@ -2,9 +2,8 @@ import React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { StockActualScreen } from './StockActualScreen';
 import { StockDiscontinuadoScreen } from './StockDiscontinuadoScreen';
-import { StockTabParamList } from '../types';
 
-const Tab = createMaterialTopTabNavigator<StockTabParamList>();
+const Tab = createMaterialTopTabNavigator();
 
 export function StockScreen() {
   return (
@@ -21,14 +20,14 @@ export function StockScreen() {
         name="Actual"
         component={StockActualScreen}
         options={{
-          title: 'Actual',
+          title: 'Stock Actual',
         }}
       />
       <Tab.Screen
         name="Discontinuado"
         component={StockDiscontinuadoScreen}
         options={{
-          title: 'Discontinuado',
+          title: 'Stock Discontinuado',
         }}
       />
     </Tab.Navigator>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { FontAwesome } from '@expo/vector-icons';
 
 import { CuentasCorrienteScreen } from '../screens/CuentasCorrienteScreen';
 import { FacturasScreen } from '../screens/FacturasScreen';
@@ -27,8 +27,8 @@ export function Navigation() {
           component={CuentasCorrienteScreen}
           options={{
             title: 'Cuentas Corriente',
-            tabBarIcon: ({ color }) => (
-              <Icon name="user-friends" size={20} color={color} />
+            tabBarIcon: ({ color }: { color: string }) => (
+              <FontAwesome name="users" size={20} color={color} />
             ),
           }}
         />
@@ -37,8 +37,8 @@ export function Navigation() {
           component={FacturasScreen}
           options={{
             title: 'Facturas',
-            tabBarIcon: ({ color }) => (
-              <Icon name="file-invoice-dollar" size={20} color={color} />
+            tabBarIcon: ({ color }: { color: string }) => (
+              <FontAwesome name="file-text-o" size={20} color={color} />
             ),
           }}
         />
@@ -47,8 +47,8 @@ export function Navigation() {
           component={StockScreen}
           options={{
             title: 'Stock',
-            tabBarIcon: ({ color }) => (
-              <Icon name="box-open" size={20} color={color} />
+            tabBarIcon: ({ color }: { color: string }) => (
+              <FontAwesome name="cube" size={20} color={color} />
             ),
           }}
         />
